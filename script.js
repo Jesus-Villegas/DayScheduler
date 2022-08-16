@@ -19,7 +19,6 @@ for (var i = 9; i < 18; i++ ) {
         $('#' + i).addClass('present');
     }
 }
-
 //Displays what you input in text area
 var todo = []; 
 todo = JSON.parse(localStorage.getItem("todoList"));
@@ -33,34 +32,3 @@ if (todo != null){
 }
 
 
-//function to save in local storage
-
-var saveBtn = document.querySelector(".saveBtn")
-//onclick button to save the written text to local storage
-$('.saveBtn').click(function(event){
-    var id = $(this).parent().attr("id");
-    var textA = $("tr .9").children().eq(1).children().val();
-    var textarea = $(this).siblings('td').eq(0).children().val();
-    console.log(id);
-    console.log(textarea);
-
-
-    //checks for local stoage
-    var todo = []; 
-    var checkStorage = JSON.parse(localStorage.getItem("todoList"));
-    if (checkStorage) {
-        for (var i = 0; i < checkStorage.length; i++){
-            todo.push(checkStorage[i]);
-        }
-        //adds to local storage
-        localStorage.setItem("todoList", JSON.stringify(todo));
-    }
-
-    //adds the new todo item to the todo list
-    todo[todo.length] = {
-        timeBlock: id,
-        todoItem: textarea
-    }
-    localStorage.setItem("todoList", JSON.stringify(todo));
-
-}); 

@@ -22,4 +22,4 @@ Day Scheduler is a web application in which helps the user in staying more organ
 
 The following animation demonstrates the application functionality:
 
-![A user clicks on slots on the color-coded calendar and edits the events.](./Assets/05-third-party-apis-homework-demo.gif)
+![](Screenshot.png)
